@@ -8,6 +8,8 @@
     font-family: "Lato", sans-serif;
 }
 
+
+
 img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
@@ -23,48 +25,47 @@ a {
 }
 
 /* ========== Header Styles ========== */
+
+.nav-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-logo {
+    width: 250px;
+}
+
 header .navbar {
     display: flex;
-    padding: 1vh;
+    padding: 10px;
     align-items: center;
-    justify-content: space-between; /* Updated for better alignment */
+    justify-content: space-around;
     background-color: #1F3C8B;
-    position: relative;
 }
 
 .navbar .menu-toggle {
     display: none;
     flex-direction: column;
-    gap: 0.4vh;
+    gap: 4px;
     cursor: pointer;
 }
 
 .navbar .menu-toggle div {
-    width: 3vh;
-    height: 0.3vh;
+    width: 30px;
+    height: 3px;
     background-color: white;
 }
 
 .nav-menu {
     display: flex;
-    gap: 6vh;
-    align-items: center;
 }
 
-.nav-link {
-    color: rgb(255, 255, 255);
-    font-size: 1.5vh;
-    font-weight: 600;
-    text-decoration: none; /* Ensures links appear clean */
-}
-
-.nav-link:hover {
-    text-decoration: underline; /* Adds a hover effect */
-}
-
-.nav-logo {
-    width: 25vh;
-}
 
 /* ========== Responsive Navigation ========== */
 @media (max-width: 1200px) {
@@ -88,7 +89,6 @@ header .navbar {
         background-color: #1F3C8B;
         position: absolute;
         top: 7vh; /* Adjust based on navbar height */
-        right: 0;
         width: 100%;
         z-index: 1000;
         padding: 2vh 0; /* Add spacing for better appearance */
