@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins&display=swap');
+
+/* ========== Styles communs ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+}
+
+header .navbar {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1F3C8B;
+}
+
+.navbar .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.navbar .menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #1F3C8B;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .part1-text {
+        font-size: 1.2rem; /* Adjusted font size for responsiveness */
+    }
+}
+
+img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-logo {
+    width: 250px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: #182434;
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    width: 300px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    text-align: start;
+}
+
+.nav-item img {
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.about img {
+    width: 20px;
+}
+
+footer h3 {
+    border-left: 5px solid #1F3C8B;
+    padding-left: 20px;
+    margin-left: 6px;
+}
+
+.hours tr {
+    border-bottom: 1px solid #A3A8AE;
+    color: #A3A8AE;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.table-hours th {
+    padding: 10px;
+    text-align: start;
+    color: #A3A8AE;
+}
+
+td {
+    text-align: end;
+}
+
+/* ========== Page d'accueil ========== */
+.part1-image {
+    background-image: url("/Daho-s-Website/12-Photoroom.png");
+    background-color: #cccccc;
+    height: 440px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.part1-text {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 100px;
+    text-shadow: 1px 1px #000;
+    backdrop-filter: blur(4px);
+}
+
+main h1 {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+main h3 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.part2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    color: #000000;
+    line-height: 32px;
+    padding: 50px;
+    align-items: center;
+    gap: 20px;
+}
+
+.titre {
+    font-weight: 700;
+    font-size: 60px;
+    color: #000000;
+    line-height: 81px;
+    text-transform: uppercase;
+}
+
+.part2-btn {
+    color: #ffffff;
+    height: 44px;
+    width: 100%;
+    max-width: 220px;
+    background-color: #1F3C8B;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px;
+}
+
+.part3 {
+    text-align: center;
+}
+
+.part3 h1 {
+    margin: 20px;
+}
+
+.allcase {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+.case {
+    height: 300px;
+    width: 350px;
+    border: 2px solid black;
+}
+
+/* ========== Page contact ========== */
+#contact {
+    text-align: center;
+    padding: 0.5em;
+}
+
+.info img {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.contact-part {
+    display: flex;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 7px solid #1F3C8B;
+    border-top-left-radius: 20px;
+    border-radius: 20px;
+    width: 60%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 0px;
+    height: 90%;
+}
+
+iframe {
+    width: 50%;
+    padding: 30px;
+}
+
+.cont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border-top: 1px solid #A3A8AE;
+    width: 100%;
+}
+
+.span {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.span span {
+    padding: 30px 10px;
+}
+
+/* ========== Page machine ========== */
+.all {
+    text-align: center;
+}
+
+.all h1 {
+    margin: 50px;
+}
+
+.allmach {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin: 40px;
+}
+
+.mach {
+    height: 400px;
+    width: 400px;
+}
+
+.mach:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+.all a {
+    color: #000;
+    font-size: larger;
+}
+
+#m-c {
+    height: 296px;
+    width: 346px;
+}
+
+p {
+    padding: 10px;
+    color: #000;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* ========== Page detail ========== */
+.mach-bat {
+    display: flex;
+}
+
+#batteur {
+    width: 600px;
+    margin: 30px;
+}
+
+.pt h3 {
+    font-weight: 700;
+    font-size: 35px;
+    border-left: 5px solid #1F3C8B;
+    padding: 0em 0.3em;
+    margin: 1em 0em;
+}
+
+.pt h1 {
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.pt li {
+    list-style: disc;
+    padding: 0.3em;
+}
+
+.pt {
+    margin: 30px;
+}
+
+.d-t td {
+    font-weight: 500;
+    padding: 0.5em;
+    text-align: start;
+    width: 50%;
+    color: #000000;
+}
+
+.d-t th {
+    text-align: start;
+    padding: 0.5em;
+    background-color: #1F3C8B;
+    color: #ffffff;
+}
+
+.d-t tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+.d-t {
+    width: 35em;
+}
+
+/* ========== Page apropos de nous ========== */
+.apn p {
+    font-size: 26px;
+    font-weight: 400;
+    color: #777;
+    margin: 0.5em;
+}
+
+.apn h1 {
+    text-align: center;
+    margin: 1em;
+}
