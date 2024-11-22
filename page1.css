@@ -633,3 +633,45 @@ p {
     text-align: center;
     margin: 1em;
 }
+/* ========== Page images ========== */
+.images {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    
+}
+.images img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+}
+.hi h1{
+    text-align: center;
+    background-color: #7777776a;
+    padding: 1em;
+
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
