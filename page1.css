@@ -412,7 +412,7 @@ hr {
     height: 400px;
     width: 400px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 20px;
+    border-radius: 5%;
 }
 
 .mach:hover {
@@ -426,8 +426,8 @@ hr {
 }
 
 #m-c {
-    height: 40vh;
-    width: 50vh;
+    height: 100%;
+    width: 100%;
     max-width: 346px;
     max-height: 296px;
 }
