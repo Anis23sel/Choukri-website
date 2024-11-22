@@ -33,7 +33,11 @@ header .navbar {
     display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 8px) {
+    .navbar{
+        width: 100%;
+
+    }
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -52,9 +56,12 @@ header .navbar {
         display: flex;
     }
 
-    .part1-text {
+    .part1-text h1{
         font-size: 1.2rem; /* Adjusted font size for responsiveness */
+        width: 100%;
+        background-color: #000000;
     }
+    
 }
 
 img {
@@ -162,6 +169,7 @@ td {
     color: white;
     padding: 100px;
     text-shadow: 1px 1px #000;
+    background-color: rgba(109, 109, 109, 0.462); /* Couleur rouge semi-transparente */
     backdrop-filter: blur(4px);
 }
 
@@ -301,6 +309,7 @@ hr {
 
 .allmach {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 80px;
@@ -310,11 +319,14 @@ hr {
 .mach {
     height: 400px;
     width: 400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
 }
 
 .mach:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 20px;
+    
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .all a {
@@ -323,8 +335,7 @@ hr {
 }
 
 #m-c {
-    height: 296px;
-    width: 346px;
+    width: 100%;
 }
 
 p {
