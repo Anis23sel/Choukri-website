@@ -134,7 +134,7 @@ header .navbar {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1440px) {
     .nav-logo {
         width: 30vh;
     }
