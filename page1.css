@@ -133,8 +133,10 @@ header .navbar {
         width: 20vh;
     }
 }
-
-@media (max-width: 1440px) {
+@media screen {
+    
+}
+@media screen and (max-width: 1440px) {
     .nav-logo {
         width: 30vh;
     }
