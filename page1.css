@@ -7,66 +7,9 @@
     box-sizing: border-box;
     font-family: "Lato", serif;
 }
-
-header .navbar {
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #1F3C8B;
-}
-
-.navbar .menu-toggle {
+.bt{
     display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
 }
-
-.navbar .menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 5em;
-}
-
-@media (max-width: 8px) {
-    .navbar{
-        width: 100%;
-
-    }
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        background: #1F3C8B;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .part1-text h1{
-        font-size: 1.2rem; /* Adjusted font size for responsiveness */
-        width: 100%;
-        background-color: #000000;
-    }
-    
-}
-
-
-
 img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
@@ -84,54 +27,50 @@ a {
 /* ========== Header Styles ========== */
 
 .nav-link {
+
     color: rgb(255, 255, 255);
     font-size: 15px;
     font-weight: 600;
 }
 
-.nav-logo {
-    width: 250px;
-}
-
 header .navbar {
-    display: flex;
+
     padding: 10px;
     align-items: center;
     justify-content: space-around;
     background-color: #1F3C8B;
 }
-
-.navbar .menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
+.logo-menu{
+    width: 250px;
 }
 
-.navbar .menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-}
-
-.nav-menu {
-    display: flex;
-}
 
 
 /* ========== Responsive Navigation ========== */
-@media (max-width: 1200px) {
-    .nav-menu {
-        gap: 4vh; /* Reduce spacing between menu items */
-    }
+@media screen and (min-width: 500px) {
 
     .nav-link {
-        font-size: 1.3vh; /* Slightly smaller font for medium screens */
+        font-size: 16px; /* Slightly smaller font for medium screens */
     }
 
     .nav-logo {
         width: 20vh;
     }
+    header .navbar {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #1F3C8B;
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    
+
 }
 
 @media screen and (max-width: 500px) {
@@ -141,7 +80,6 @@ header .navbar {
     .navbar{
         display: flex;
         flex-direction: column;
-
     }
     .logo-menu{
         display: flex;
@@ -149,8 +87,11 @@ header .navbar {
         width: 100%;
         align-items: center;
     }
-    #liste{
+    .bt{
         display: block;
+    }
+    #liste{
+        display: none;
         padding: 20px;
         text-align: center;
         width: 100%;
@@ -168,6 +109,7 @@ header .navbar {
         background: none;
         color: #ffffff;
     }
+    
 }
 
 /* ========== Footer Styles ========== */   
@@ -235,7 +177,7 @@ td {
 /* ========== Page d'accueil ========== */
 
 .part1-image {
-    background-image: url("/Daho-s-Website/machine/2en12.png");
+    background-image: url("machine/lavage.png");
     background-color: #cccccc;
     height: 70vh;
     background-position: center;
@@ -267,22 +209,6 @@ td {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
-    .part1-image {
-        height: 35vh;
-    }
-    .part1-text h1 {
-        padding: 8vh;
-        font-size: 4.5vh;
-    }
-}
-
-@media (max-width: 768px) {
-    .part1-image {
-        height: 30vh;
-    }
-    
-}
 
 @media (max-width: 480px) {
     .part1-image {
@@ -292,15 +218,10 @@ td {
         font-size: 20px;
         padding: 0.3em;
     }
-    .mach{
-        width: 70%;
-
-        
-        
-    }
     .part1-text h3{
         font-size: 14px;
     }
+
 }
 
 main h1 {
@@ -428,6 +349,24 @@ hr {
 .span span {
     padding: 3vh 1vh;
 }
+@media screen and (max-width:500px) {
+
+    .contact-part {
+        display: flex;
+        flex-direction: column-reverse;
+    }  
+  }
+  .cont{
+    width: 100%;
+    margin: 10px;
+  }
+  iframe{
+    width: 100%;
+  }
+  .info{
+    width: 80%;
+    height: 300px;
+  }
 
 
 /* ========== Page machine ========== */
@@ -438,7 +377,7 @@ hr {
 
 .all h1 {
     margin: 5vh;
-    font-size: 3vh; /* Adjust font size for responsiveness */
+    font-size: 60px; /* Adjust font size for responsiveness */
 }
 
 .allmach {
@@ -446,23 +385,17 @@ hr {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 8vw;
-    margin: 4vh;
+    gap: 20px;
+
 }
 
 .mach {
-    height: 400px;
-    width: 400px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
 }
-
-.mach:hover {
-    
-
-    border-radius: 5%;
-}
-
 .mach:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -474,80 +407,48 @@ hr {
 }
 
 #m-c {
-    height: 100%;
-    width: 100%;
-    aspect-ratio: 3/2;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
     mix-blend-mode: color-burn;
 }
 
 p {
-    padding: 1vh;
+    padding: 1em;
     color: #000;
     font-size: 3vh; /* Adjust font size for readability */
     font-weight: 800;
 }
 
 /* ========== Responsive Adjustments ========== */
-@media (max-width: 1200px) {
-    .allmach {
-        gap: 6vw;
-    }
-
-    .mach {
-        height: 18vh;
-        width: 18vh;
-    }
+@media screen and (max-width: 1200px) {
 
     p {
         font-size: 2.5vh;
     }
 
     .all h1 {
-        font-size: 2.5vh;
+        font-size: 60px;
     }
 }
 
-@media (max-width: 768px) {
-    .allmach {
-        gap: 5vw;
-    }
 
-    .mach {
-        height: 25vh;
-        width: 25vh;
-    }
+@media screen and (max-width: 500px) {
+
 
     p {
-        font-size: 2vh;
+        font-size: 16px;
+        padding: 0%;
     }
 
     .all h1 {
-        font-size: 2vh;
-    }
-}
-
-@media (max-width: 480px) {
-    .allmach {
-        gap: 4vw;
-    }
-
-    .mach {
-        height: 30vh;
-        width: 30vh;
-    }
-
-    p {
-        font-size: 1.8vh;
-    }
-
-    .all h1 {
-        font-size: 1.8vh;
+        font-size: 40px;
     }
 
     #m-c {
-        height: 22vh;
-        width: 28vh;
+        height: 80%;
+        width: 100%;
+        margin: 0px;
     }
 }
 
@@ -633,11 +534,11 @@ p {
     width: 400px;
     height: 400px;
     object-fit: cover;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 .images img:hover{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
@@ -666,6 +567,13 @@ p {
   .btn-container:hover {
     background-color: #0056b3;
 
+  }
+  @media screen and (max-width:500px) {
+
+    .images img{
+        width: 350px;
+        height: 350px;
+       }
   }
 
 /* Modal styles */
@@ -717,3 +625,18 @@ p {
 #nextImg {
     right: 10px;
 }
+
+@media screen and (max-width:500px) {
+
+    .mach-bat{
+        display: flex;
+        flex-direction: column;
+    }
+    #batteur {
+        width: 80%;
+    }
+
+    .d-t{
+        width: 90%;
+    }
+  }
