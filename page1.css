@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins&display=swap');
 
 /* ========== Global Styles ========== */
@@ -455,6 +456,7 @@ p {
 /* ========== Page detail ========== */
 .mach-bat {
     display: flex;
+
 }
 
 #batteur {
@@ -481,8 +483,10 @@ p {
 }
 
 .pt {
+    width: 100%;
     margin: 30px;
 }
+
 
 .d-t td {
     font-weight: 500;
@@ -503,9 +507,7 @@ p {
     background-color: #ddd;
 }
 
-.d-t {
-    width: 35em;
-}
+
 /* ========== Page apropos de nous ========== */
 .apn p {
     font-size: 26px;
@@ -575,85 +577,15 @@ p {
        }
   }
 
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-    margin: 6% auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#prevImg, #nextImg {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px;
-    transform: translateY(-50%);
-}
-
-#prevImg {
-    left: 10px;
-}
-
-#nextImg {
-    right: 10px;
-}
-
-@media screen and (max-width:500px) {
-
-    .mach-bat{
-        display: flex;
-        flex-direction: column;
-    }
-    #batteur {
-        width: 80%;
-    }
-
-    .d-t{
-        width: 90%;
-    }
-  }
-
-
-
-
-
  /* Styles généraux pour le carrousel */
 /* Carrousel */
 .gallery-slider {
-    position: relative;
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 .gallery-main img {
-    width: 100%;
     height: auto;
     max-height: 400px;
     cursor: pointer;
@@ -668,6 +600,7 @@ p {
     margin-top: 15px;
     overflow-x: auto;
     padding: 5px;
+    flex-wrap: wrap;
 }
 
 .thumbnail-gallery img {
@@ -706,7 +639,7 @@ p {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    
     border-radius: 10px;
     animation: fadeIn 0.3s;
 }
@@ -734,4 +667,32 @@ p {
     .thumbnail-gallery {
         gap: 5px;
     }
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
