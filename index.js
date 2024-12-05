@@ -26,25 +26,24 @@
 
 
 
-  // Ajout dans index.js
 
-let currentSlide = 0;
-
-function moveSlide(direction) {
-    const slides = document.querySelector('.gallery-slides');
-    const totalSlides = slides.children.length;
-
-    // Calculer la nouvelle position
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+// Changer l'image principale en cliquant sur une miniature
+function changeImage(src) {
+  const mainImage = document.getElementById('mainImage');
+  mainImage.src = src;
 }
 
-
-// Mettre à jour l'image principale quand une miniature est cliquée
-function setMainImage(index) {
-    const slides = document.querySelector('.gallery-slides');
-    const totalSlides = slides.children.length;
-
-    currentSlide = index;
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+// Ouvrir la modale pour agrandir l'image
+function openModal(src) {
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  modal.style.display = 'flex';
+  modalImage.src = src;
 }
+
+// Fermer la modale
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  modal.style.display = 'none';
+}
+

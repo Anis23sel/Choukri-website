@@ -38,36 +38,31 @@
     
 <main>
 <div class="mach-bat">
-        <div class="allimg">
-        <div class="para">
-            <div class="gallery-slider">
-                <div class="gallery-slides">
-                    <div class="slide"><img src="machine/emballage.png" alt="Image 1"></div>
-                    <div class="slide"><img src="machine/eab/image1.jpg" alt="Image 1"></div>
-                    <div class="slide"><img src="machine/eab/image2.jpg" alt="Image 2"></div>
-                    <div class="slide"><img src="machine/eab/image3.jpg" alt="Image 3"></div>
-                    <div class="slide"><img src="machine/eab/image4.jpg" alt="Image 4"></div>
-                    <div class="slide"><img src="machine/eab/image5.jpg" alt="Image 5"></div>
-                    <div class="slide"><img src="machine/eab/image6.jpg" alt="Image 6"></div>
-                    <div class="slide"><img src="machine/eab/image7.jpg" alt="Image 7"></div>
-                </div>
-                <!-- Boutons de navigation -->
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
+    <div class="gallery-slider">
+        <!-- Image principale -->
+        <div class="gallery-main">
+            <img id="mainImage" src="machine/emballage2.png" alt="Image principale" onclick="openModal(this.src)">
         </div>
-
-        <!-- Images en miniatures en dessous du carrousel -->
+    
+        <!-- Miniatures -->
         <div class="thumbnail-gallery">
-            <img src="machine/eab/image1.jpg" alt="Image 1" onclick="setMainImage(0)">
-            <img src="machine/eab/image2.jpg" alt="Image 2" onclick="setMainImage(1)">
-            <img src="machine/eab/image3.jpg" alt="Image 3" onclick="setMainImage(2)">
-            <img src="machine/eab/image4.jpg" alt="Image 4" onclick="setMainImage(3)">
-            <img src="machine/eab/image5.jpg" alt="Image 5" onclick="setMainImage(4)">
-            <img src="machine/eab/image6.jpg" alt="Image 6" onclick="setMainImage(5)">
-            <img src="machine/eab/image7.jpg" alt="Image 7" onclick="setMainImage(6)">
+            <img src="machine/emballage2.png" alt="Miniature 1" onclick="changeImage(this.src)">
+            <img src="machine/eab/image1.jpg" alt="Miniature 1" onclick="changeImage(this.src)">
+            <img src="machine/eab/image2.jpg" alt="Miniature 2" onclick="changeImage(this.src)">
+            <img src="machine/eab/image3.jpg" alt="Miniature 3" onclick="changeImage(this.src)">
+            <img src="machine/eab/image4.jpg" alt="Miniature 4" onclick="changeImage(this.src)">
+            <img src="machine/eab/image5.jpg" alt="Miniature 5" onclick="changeImage(this.src)">
+            <img src="machine/eab/image6.jpg" alt="Miniature 6" onclick="changeImage(this.src)">
+            <img src="machine/eab/image7.jpg" alt="Miniature 7" onclick="changeImage(this.src)">
         </div>
     </div>
+    
+    <!-- Modale pour afficher l'image en grand -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img id="modalImage" alt="Image agrandie">
+    </div>
+    
+    
 
         <div class="pt">
             <h1>Table de roulage et d'emballage avec bross</h1>
