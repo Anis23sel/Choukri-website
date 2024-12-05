@@ -677,8 +677,8 @@ p {
         gap: 5px;
         display: flex;
         flex-wrap: nowrap;
-        
-        margin: 2%;
+        justify-content: left;
+    
     }
 }
 .prev, .next {
