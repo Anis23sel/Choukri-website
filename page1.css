@@ -655,6 +655,15 @@ p {
 
 /* Media Queries pour mobile */
 @media screen and (max-width: 768px) {
+    .mach-bat{
+        display: flex;
+        flex-direction: column;
+    }
+    .pt{
+        width: 100%;
+        margin: 0%;
+        padding: 2%;
+    }
     .gallery-main img {
         max-height: 250px; /* Réduire la taille sur mobile */
     }
@@ -666,6 +675,10 @@ p {
 
     .thumbnail-gallery {
         gap: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+        
+        margin: 2%;
     }
 }
 .prev, .next {
