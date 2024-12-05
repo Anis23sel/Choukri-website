@@ -22,3 +22,29 @@
     form.style.display = "none";
   }
   
+  
+
+
+
+  // Ajout dans index.js
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelector('.gallery-slides');
+    const totalSlides = slides.children.length;
+
+    // Calculer la nouvelle position
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+
+// Mettre à jour l'image principale quand une miniature est cliquée
+function setMainImage(index) {
+    const slides = document.querySelector('.gallery-slides');
+    const totalSlides = slides.children.length;
+
+    currentSlide = index;
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}

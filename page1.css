@@ -177,7 +177,7 @@ td {
 /* ========== Page d'accueil ========== */
 
 .part1-image {
-    background-image: url("machine/lavage.png");
+    background-image: url("machine/emballage2.png");
     background-color: #cccccc;
     height: 70vh;
     background-position: center;
@@ -195,7 +195,7 @@ td {
     color: white;
     padding: 10vh;
     text-shadow: 1px 1px #000;
-    background-color: rgba(109, 109, 109, 0.462); /* Couleur rouge semi-transparente */
+    background-color: rgba(109, 109, 109, 0); /* Couleur rouge semi-transparente */
     backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
@@ -506,7 +506,6 @@ p {
 .d-t {
     width: 35em;
 }
-
 /* ========== Page apropos de nous ========== */
 .apn p {
     font-size: 26px;
@@ -640,3 +639,105 @@ p {
         width: 90%;
     }
   }
+
+
+
+
+
+ /* Ajout dans page1.css */
+
+/* Conteneur du carrousel principal */
+.gallery-slider {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Ajuste la hauteur à ta convenance */
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Conteneur des slides (images) */
+.gallery-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.slide {
+    min-width: 100%; /* Chaque image prend toute la largeur */
+    height: 100%;    /* Chaque image prend toute la hauteur du conteneur */
+
+}
+
+.slide img {
+    width: 100%;    /* L'image prend toute la largeur */
+    height: 100%;   /* L'image prend toute la hauteur */
+    object-fit: cover; /* Pour que l'image couvre toute la zone sans être déformée */
+}
+
+/* Boutons de navigation */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Galerie d'images en miniatures */
+.thumbnail-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.thumbnail-gallery img {
+    width: 80px;
+    height: 60px;
+    margin: 0 5px;
+    cursor: pointer;
+    object-fit: cover;  /* Pour que les vignettes gardent une bonne proportion */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol pour les vignettes */
+.thumbnail-gallery img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+
+    .gallery-slider {
+        height: 200px; /* Réduit davantage la hauteur sur les très petits écrans */
+    }
+
+    .thumbnail-gallery img {
+        width: 50px;
+        height: 35px; /* Encore plus petites vignettes */
+    }
+
+    /* Ajustement des boutons de navigation */
+    button {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    /* Vignettes qui défilent horizontalement sur les très petits écrans */
+    .thumbnail-gallery {
+        overflow-x: scroll;
+        padding: 10px 0;
+    }
+}
