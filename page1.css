@@ -661,8 +661,9 @@ p {
     }
     .pt{
         width: 100%;
-        margin: 0%;
-        padding: 2%;
+        padding: 5%;
+        margin: 0;
+
     }
     .gallery-main img {
         max-height: 250px; /* Réduire la taille sur mobile */

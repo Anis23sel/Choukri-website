@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page1.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-menu">
+            <a href="https://anis23sel.github.io/Daho-s-website/page1.html" class="nav-logo">
+                <img src="Nouveau dossier/TAPMACHINE SYSTEMSWHITE.png" alt="">
+            </a>
+            <button type="button" onclick="toggleForm()" class="bt" id="nav-list"><span class="material-symbols-outlined">menu</span></button>
+            </div>
+            <ul class="nav-menu"  id="liste">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">A propos de nous</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://anis23sel.github.io/Daho-s-website/machine.html" class="nav-link">Machines</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://anis23sel.github.io/Daho-s-website/image.html" class="nav-link">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://anis23sel.github.io/Daho-s-website/contact.html" class="nav-link">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+    
+<main>
+    <div class="mach-bat">
+        <div class="gallery-slider">
+            <!-- Image principale -->
+            <div class="gallery-main">
+                <img id="mainImage" src="machine/centi-mosquee.png" alt="Image principale" onclick="openModal(this.src)">
+            </div>
+        
+            <!-- Miniatures -->
+            <div class="thumbnail-gallery">
+                <img src="machine/centi-mosquee.png" alt="Miniature 1" onclick="changeImage(this.src)">
+                <img src="machine/centrifugeuse/centri-mosquee/image (1).jpg" alt="Miniature 1" onclick="changeImage(this.src)">
+                <img src="machine/centrifugeuse/centri-mosquee/image (2).jpg" alt="Miniature 2" onclick="changeImage(this.src)">
+                <img src="machine/centrifugeuse/centri-mosquee/image (3).jpg" alt="Miniature 3" onclick="changeImage(this.src)">
+                <img src="machine/centrifugeuse/centri-mosquee/image (4).jpg" alt="Miniature 4" onclick="changeImage(this.src)">
+            </div>
+        </div>
+        
+        <!-- Modale pour afficher l'image en grand -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <img id="modalImage" alt="Image agrandie">
+        </div>
+        <div class="pt">
+            <h1> Centrifugeuse à tapis de mosquee</h1>
+            <ul class="avantage">
+                <h3>Avantage</h3>
+                <li>Fonctionnement très silencieux</li>
+                <li>Rotor de 200 cm de long</li>
+                <li>Rotor équilibré électroniquement</li>
+                <li>Tuyau en acier inoxydable INOX sans soudure de 3 mm</li>
+                <li>Anneau de renfort de roue</li>
+                <li>3 ans de garantie sur le rotor</li>
+                <li>Joint de porte</li>
+                <li>Charnières de porte boulonnées</li>
+                <li>Système de roulement innovant</li>
+                <li>Panneau de commande clair et simple</li>
+                <li>Potentiomètre de temps de travail et marche arrière</li>
+                <li>Fin de course protégeant contre le démarrage lorsque la porte est ouverte</li>
+                <li>Poignée d'ouverture de porte améliorée</li>
+                <li>Roues amovibles avec supports</li>
+                <li>Possibilité d'insérer l'appareil à travers des portes étroites</li>
+                <li>Corps de la centrifugeuse en acier épais, galvanisé à chaud</li>
+                <li>Wrap de voiture avec des graphismes esthétiques facilitant l'entretien</li>
+                <li>Documentation technique - Certificat CE et CE</li>
+                <li>Moteur économique d'une puissance de 2,2 kW</li>
+            </ul>
+    
+        <div class="donnees">
+            <h3>Données techniques</h3>
+            <table class="d-t">
+            <tr>
+                <th>Caractéristique</th>
+                <th>Détail</th>
+            </tr>
+            <tr>
+                <td>Largeur maximale du tapis</td>
+                <td>2,0 m</td>
+            </tr>
+            <tr>
+                <td>Efficacité</td>
+                <td>50 m²/heure</td>
+            </tr>
+            <tr>
+                <td>Longueur</td>
+                <td>2350 mm</td>
+            </tr>
+            <tr>
+                <td>Largeur</td>
+                <td>920 mm</td>
+            </tr>
+            <tr>
+                <td>Hauteur</td>
+                <td>1000 mm</td>
+            </tr>
+            <tr>
+                <td>Balance</td>
+                <td>250 kg</td>
+            </tr>
+            <tr>
+                <td>Diamètre du rotor</td>
+                <td>320 mm</td>
+            </tr>
+            <tr>
+                <td>Diamètre du couvercle du rotor</td>
+                <td>400 mm</td>
+            </tr>
+            <tr>
+                <td>Matériau du rotor</td>
+                <td>Acier inoxydable</td>
+            </tr>
+            <tr>
+                <td>Matériel</td>
+                <td>Galvanisé à chaud</td>
+            </tr>
+            <tr>
+                <td>Hauteur de chargement</td>
+                <td>310 mm</td>
+            </tr>
+            <tr>
+                <td>Nombre de vidanges d'eau</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Diamètre des évacuations d'eau</td>
+                <td>Ø75 mm</td>
+            </tr>
+            <tr>
+                <td>Type de suspension</td>
+                <td>Roues</td>
+            </tr>
+            <tr>
+                <td>Puissance du moteur</td>
+                <td>2,2 kW</td>
+            </tr>
+            <tr>
+                <td>Régime moteur</td>
+                <td>1100 tr/min</td>
+            </tr>
+            <tr>
+                <td>Connexion</td>
+                <td>16A 5P 400V</td>
+            </tr>
+            <tr>
+                <td>Garantie</td>
+                <td>12 mois</td>
+            </tr>
+            <tr>
+                <td>Garantie prolongée</td>
+                <td>NON</td>
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</main>
+
+
+<footer>
+    <div class="footer-logo">
+    <img src="Nouveau dossier/TAPMACHINE SYSTEMS WHITE.png" alt="">
+    </div>
+
+    <div class="about">
+        <ul class="footer-info">
+            <h3>ABOUT :</h3>
+            <li class="nav-item">
+                <a href="https://www.google.com/maps/place/Tapmachine+Systems/@36.3120516,6.6077126,16z/data=!4m6!3m5!1s0x12f171f12ef8aeb9:0x525ddc65821ac786!8m2!3d36.3120793!4d6.6064421!16s%2Fg%2F11t5wx_bjp?authuser=0&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"> <img src="icon/map-marker-2-24.png" alt="">Ain El Bey</a>
+            </li>
+            <li class="nav-item">
+                <a href="mailto:dse@gmail.com"><img src="icon/mail-24.png" alt="">dse@gmail.com</a>
+            </li>
+            <li class="nav-item">
+                <a href="tel:+213552533651"><img src="icon/phone-24.png" alt="">+213552533651</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="hours">
+        <H3>Heures de Travail</H3>
+        <table class="table-hours">
+            <tr>
+                <th>Dimache - Samedi</th>
+                <td>08:00 - 17:00</td>
+              </tr>
+              <tr>
+                <th>Vendredi</th>
+                <td><strong>ferme</strong></td>
+              </tr>
+
+          </table>
+
+    </div>
+</footer>
+</body>
+</html>
