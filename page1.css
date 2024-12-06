@@ -395,7 +395,7 @@ hr {
     border-radius: 20px;
     width: 400px;
     height: 400px;
-    margin: 0px;
+    margin: 20px;
 }
 .mach:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -415,7 +415,7 @@ hr {
 }
 
 p {
-    padding: 1em;
+
     color: #000;
     font-size: 3vh; /* Adjust font size for readability */
     font-weight: 800;
