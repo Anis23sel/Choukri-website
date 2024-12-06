@@ -419,6 +419,7 @@ p {
     color: #000;
     font-size: 3vh; /* Adjust font size for readability */
     font-weight: 800;
+    overflow: hidden;
 }
 
 /* ========== Responsive Adjustments ========== */
