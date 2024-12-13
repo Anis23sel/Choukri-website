@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma page</title>
+
+    <!-- Intégration de Google Traduction -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,fr,de,it,es',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Personnalisation du widget Google Traduction -->
+    <style>
+        #google_translate_element {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .goog-te-menu-frame {
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+        }
+
+        .goog-te-menu-value {
+            color: #007BFF;
+        }
+
+        .goog-te-menu-value:hover {
+            color: #FF5722;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Widget de traduction -->
+    <div id="google_translate_element"></div>
+
+    <header>
+        <h1>Bienvenue sur mon site !</h1>
+    </header>
+
+    <main>
+        <p>Voici un exemple de contenu sur ma page. Vous pouvez le traduire en cliquant sur le menu en haut.</p>
+    </main>
+
+    <footer>
+        <p>© 2024 Mon site web</p>
+    </footer>
+
+</body>
+</html>

@@ -8,6 +8,9 @@
     box-sizing: border-box;
     font-family: "Lato", serif;
 }
+#google_translate_element{
+    
+}
 .bt{
     display: none;
 }
@@ -22,27 +25,59 @@ ul {
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* ========== Header Styles ========== */
 
 .nav-link {
-
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 15px;
     font-weight: 600;
 }
-
-header .navbar {
-
-    padding: 10px;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #1F3C8B;
+.nav-link:hover{
+    color:#0056b3;
 }
+.ar {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Arial', sans-serif; /* Utilisez une police qui supporte bien l'arabe */
+}
+
 .logo-menu{
     width: 250px;
+}
+/* Style du menu déroulant */
+
+#language-dropdown {
+    color: #000000;
+    font-size: 16px; /* Taille du texte */
+    padding: 4px 6px; /* Espacement autour du texte */
+    background-color: #ffffff00; /* Fond blanc */
+    border: 2px solid #00000000; /* Bordure grise claire */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+    transition: all 0.3s ease; /* Animation de transition */
+    width: 3.5em;
+}
+
+/* Changer la bordure et la couleur de fond au survol */
+#language-dropdown:hover {
+    border-color: #007bff; /* Bordure bleue au survol */
+    background-color: #f1f1f1; /* Fond gris clair au survol */
+}
+
+/* Changer la couleur du texte lorsqu'une option est sélectionnée */
+#language-dropdown option {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Couleur du texte des options */
+    background-color: #fff; /* Fond blanc des options */
+}
+
+/* Option active - lorsqu'une langue est sélectionnée */
+#language-dropdown:focus {
+    border-color: #007bff; /* Bordure bleue lorsqu'on sélectionne */
+    outline: none; /* Supprimer le contour par défaut */
 }
 
 
@@ -57,18 +92,26 @@ header .navbar {
     .nav-logo {
         width: 20vh;
     }
-    header .navbar {
+    .navbar {
         display: flex;
         flex-direction: row;
         padding: 10px;
         align-items: center;
         justify-content: space-around;
-        background-color: #1F3C8B;
+        background-color: #ffffff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        z-index: 10; 
     }
     .nav-menu {
         display: flex;
         flex-direction: row;
         gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .language-selector{
+        position: relative;
+        left: 100px;
     }
     
 
@@ -81,6 +124,7 @@ header .navbar {
     .navbar{
         display: flex;
         flex-direction: column;
+        
     }
     .logo-menu{
         display: flex;
@@ -90,13 +134,15 @@ header .navbar {
     }
     .bt{
         display: block;
+
     }
     #liste{
         display: none;
         padding: 20px;
         text-align: center;
         width: 100%;
-        height: 200px
+        height: 200px;
+
     }
     .nav-link{
         font-size: 16px;
@@ -108,7 +154,7 @@ header .navbar {
     .bt{
         border: none;
         background: none;
-        color: #ffffff;
+        color: #000000;
     }
     
 }
@@ -179,13 +225,11 @@ td {
 
 .part1-image {
     background-image: url("machine/emballage2.png");
-    background-color: #cccccc;
     height: 70vh;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    margin-bottom: 2vh; /* Space between part1 and part2 */
+    margin: 5vh 0px; /* Space between part1 and part2 */
+    z-index: 1; 
 }
 
 
@@ -196,7 +240,7 @@ td {
     color: white;
     padding: 10vh;
     text-shadow: 1px 1px #000;
-    background-color: rgba(109, 109, 109, 0); /* Couleur rouge semi-transparente */
+    background-color: rgba(187, 187, 187, 0); /* Couleur rouge semi-transparente */
     backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
@@ -242,7 +286,7 @@ main h3 {
     background-color: #ffffff;
     font-weight: 700;
     font-size: 2.5vh;
-    color: #000000;
+    color: #0e2038;
     line-height: 3.2vh;
     padding: 5vh;
     align-items: center;
@@ -253,7 +297,6 @@ main h3 {
 .titre {
     font-weight: 700;
     font-size: 6vh;
-    color: #000000;
     line-height: 8vh;
     text-transform: uppercase;
 }

@@ -13,186 +13,309 @@
         <nav class="navbar">
             <div class="logo-menu">
             <a href="https://anis23sel.github.io/Daho-s-website/page1.html" class="nav-logo">
-                <img src="Nouveau dossier/TAPMACHINE SYSTEMSWHITE.png" alt="">
+                <img src="Nouveau dossier/TAPMACHINE SYSTEMS BLUE. spng.png" alt="">
             </a>
             <button type="button" onclick="toggleForm()" class="bt" id="nav-list"><span class="material-symbols-outlined">menu</span></button>
             </div>
-            <ul class="nav-menu"  id="liste">
+            <ul class="nav-menu" id="liste">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">A propos de nous</a>
+                    <a href="#" class="nav-link" id="about-link">A propos de nous</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://anis23sel.github.io/Daho-s-website/machine.html" class="nav-link">Machines</a>
+                    <a href="https://anis23sel.github.io/Daho-s-website/machine.html" class="nav-link" id="machines-link">Machines</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://anis23sel.github.io/Daho-s-website/image.html" class="nav-link">Galerie</a>
+                    <a href="https://anis23sel.github.io/Daho-s-website/image.html" class="nav-link" id="gallery-link">Galerie</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://anis23sel.github.io/Daho-s-website/contact.html" class="nav-link">Contact</a>
+                    <a href="https://anis23sel.github.io/Daho-s-website/contact.html" class="nav-link" id="contact-link">Contact</a>
                 </li>
-
+                <li class="nav-item">
+                    <div class="language-selector">
+                        <select id="language-dropdown" onchange="changeLanguage(this.value)">
+                            <option value="fr">Fr</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
-
         </nav>
     </header>
-    
-<main>
-    <div class="mach-bat">
-        <div class="gallery-slider">
-            <!-- Image principale -->
-            <div class="gallery-main">
-                <img id="mainImage" src="machine/batteur.png" alt="Image principale" onclick="openModal(this.src)">
+
+    <main>
+        <div class="mach-bat">
+            <div class="gallery-slider">
+                <!-- Image principale -->
+                <div class="gallery-main">
+                    <img id="mainImage" src="machine/batteur.png" alt="Image principale" onclick="openModal(this.src)">
+                </div>
+
+                <!-- Miniatures -->
+                <div class="thumbnail-gallery">
+                    <img src="machine/batteur.png" alt="Miniature 1" onclick="changeImage(this.src)">
+                    <img src="machine/batteur/image (1).jpg" alt="Miniature 1" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (2).jpg" alt="Miniature 2" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (3).jpg" alt="Miniature 3" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (4).jpg" alt="Miniature 4" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (5).jpg" alt="Miniature 5" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (6).jpg" alt="Miniature 6" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (7).jpg" alt="Miniature 7" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (8).jpg" alt="Miniature 8" onclick="changeImage(this.src)">  
+                    <img src="machine/batteur/image (9).jpg" alt="Miniature 9" onclick="changeImage(this.src)">  
+                </div>
             </div>
-        
-            <!-- Miniatures -->
-            <div class="thumbnail-gallery">
-                <img src="machine/batteur.png" alt="Miniature 1" onclick="changeImage(this.src)">
-                <img src="machine/batteur/image (1).jpg" alt="Miniature 1" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (2).jpg" alt="Miniature 2" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (3).jpg" alt="Miniature 3" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (4).jpg" alt="Miniature 4" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (5).jpg" alt="Miniature 5" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (6).jpg" alt="Miniature 6" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (7).jpg" alt="Miniature 7" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (8).jpg" alt="Miniature 8" onclick="changeImage(this.src)">  
-                <img src="machine/batteur/image (9).jpg" alt="Miniature 9" onclick="changeImage(this.src)">  
-</div>
+
+            <!-- Modale pour afficher l'image en grand -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <img id="modalImage" alt="Image agrandie">
+            </div>
+            <div class="pt">
+                <h1 id="machine-title">Batteur de tapis </h1>
+                <ul class="avantage">
+                    <h3 id="adv-title">Avantages</h3>
+                    <li id="adv-1">Une amélioration significative de la qualité de service par rapport au fouet mécanique Tornado T-600</li>
+                    <li id="adv-2">Économiser de l'électricité</li>
+                    <li id="adv-3">Possibilité de placer la machine à côté du mur</li>
+                    <li id="adv-4">Économiser du travail humain et raccourcir le temps de service</li>
+                    <li id="adv-5">Système d'agitation sûr et efficace</li>
+                    <li id="adv-6">Possibilité de secouer plusieurs petits tapis en même temps</li>
+                    <li id="adv-7">L'ensemble comprend un absorbeur et une plateforme pour rouler les tapis</li>
+                    <li id="adv-8">Panneau de commande simple et clair (interrupteur, marche arrière, potentiomètre pour régler la vitesse d'avancement du tapis)</li>
+                    <li id="adv-9">Quatre roues pivotantes avec verrou qui garantissent la mobilité</li>
+                    <li id="adv-10">L'ensemble de l'appareil est en acier galvanisé à chaud</li>
+                </ul>
+                <div class="donnees">
+                    <h3 id="tech-title">Données techniques</h3>
+                    <table class="d-t">
+                        <tr>
+                            <th id="spec-name">Caractéristique</th>
+                            <th id="spec-detail">Détail</th>
+                        </tr>
+                        <tr>
+                            <td id="max-width">Largeur maximale du tapis</td>
+                            <td id="max-width-detail">3,0 m</td>
+                        </tr>
+                        <tr>
+                            <td id="efficiency">Efficacité</td>
+                            <td id="efficiency-detail">250 m²/heure</td>
+                        </tr>
+                        <tr>
+                            <td id="length">Longueur</td>
+                            <td id="length-detail">3300 mm</td>
+                        </tr>
+                        <tr>
+                            <td id="width">Largeur</td>
+                            <td id="width-detail">800 mm</td>
+                        </tr>
+                        <tr>
+                            <td id="height">Hauteur</td>
+                            <td id="height-detail">1400 mm</td>
+                        </tr>
+                        <tr>
+                            <td id="weight">Poids</td>
+                            <td id="weight-detail">300 kg</td>
+                        </tr>
+                        <tr>
+                            <td id="material">Matériau</td>
+                            <td id="material-detail">Galvanisé à chaud</td>
+                        </tr>
+                        <tr>
+                            <td id="suspension">Type de suspension</td>
+                            <td id="suspension-detail">Roues</td>
+                        </tr>
+                        <tr>
+                            <td id="motor-power">Puissance du moteur</td>
+                            <td id="motor-power-detail">3,7 kW</td>
+                        </tr>
+                        <tr>
+                            <td id="connection">Connexion</td>
+                            <td id="connection-detail">16A 5P 400V</td>
+                        </tr>
+                        <tr>
+                            <td id="reverse">Inverse</td>
+                            <td id="reverse-detail">Oui</td>
+                        </tr>
+                        <tr>
+                            <td id="cord-length">Longueur du cordon d'alimentation</td>
+                            <td id="cord-length-detail">2 mètres</td>
+                        </tr>
+                        <tr>
+                            <td id="battens">Nombre de bandes battantes</td>
+                            <td id="battens-detail">36</td>
+                        </tr>
+                        <tr>
+                            <td id="replace-bands">Possibilité de remplacer les sangles</td>
+                            <td id="replace-bands-detail">Oui</td>
+                        </tr>
+                        <tr>
+                            <td id="warranty">Garantie</td>
+                            <td id="warranty-detail">12 mois</td>
+                        </tr>
+                        <tr>
+                            <td id="extended-warranty">Garantie prolongée</td>
+                            <td id="extended-warranty-detail">Facultatif</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-        
-        <!-- Modale pour afficher l'image en grand -->
-        <div id="imageModal" class="modal" onclick="closeModal()">
-            <img id="modalImage" alt="Image agrandie">
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="Nouveau dossier/TAPMACHINE SYSTEMS WHITE.png" alt="">
         </div>
-        <div class="pt">
-            <h1>Batteur de tapis </h1>
-            <ul class="avantage">
-                <h3>Avantage</h3>
-                <li>une amélioration significative de la qualité de service par rapport au fouet mécanique Tornado T-600</li>
-                <li>économiser de l'électricité</li>
-                <li>possibilité de placer la machine à côté du mur</li>
-                <li>économiser du travail humain et raccourcir le temps de service</li>
-                <li>système d'agitation sûr et efficace</li>
-                <li>possibilité de secouer plusieurs petits tapis en même temps</li>
-                <li>l'ensemble comprend un absorbeur et une plateforme pour rouler les tapis</li>
-                <li>panneau de commande simple et clair (interrupteur, marche arrière, potentiomètre pour régler la vitesse d'avancement du tapis)</li>
-                <li>quatre roues pivotantes avec verrou qui garantissent la mobilité</li>
-                <li>l'ensemble de l'appareil est en acier galvanisé à chaud</li>
+
+        <div class="about">
+            <ul class="footer-info">
+                <h3 id="footer-about">ABOUT :</h3>
+                <li class="nav-item">
+                    <a href="https://www.google.com/maps/place/Tapmachine+Systems/@36.3120516,6.6077126,16z/data=!4m6!3m5!1s0x12f171f12ef8aeb9:0x525ddc65821ac786!8m2!3d36.3120793!4d6.6064421!16s%2Fg%2F11t5wx_bjp?authuser=0&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"> <img src="icon/map-marker-2-24.png" alt="">Ain El Bey</a>
+                </li>
+                <li class="nav-item">
+                    <a href="mailto:dse@gmail.com"><img src="icon/mail-24.png" alt="">dse@gmail.com</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tel:+213552533651"><img src="icon/phone-24.png" alt="">+213552533651</a>
+                </li>
             </ul>
-    
-        <div class="donnees">
-            <h3>Données techniques</h3>
-            <table class="d-t">
-            <tr>
-                <th>Caractéristique</th>
-                <th>Détail</th>
-            </tr>
-            <tr>
-                <td>Largeur maximale du tapis</td>
-                <td>3,0 m</td>
-            </tr>
-            <tr>
-                <td>Efficacité</td>
-                <td>250 m²/heure</td>
-            </tr>
-            <tr>
-                <td>Longueur</td>
-                <td>3300 mm</td>
-            </tr>
-            <tr>
-                <td>Largeur</td>
-                <td>800 mm</td>
-            </tr>
-            <tr>
-                <td>Hauteur</td>
-                <td>1400 mm</td>
-            </tr>
-            <tr>
-                <td>Balance</td>
-                <td>300 kg</td>
-            </tr>
-            <tr>
-                <td>Matériel</td>
-                <td>Galvanisé à chaud</td>
-            </tr>
-            <tr>
-                <td>Type de suspension</td>
-                <td>Roues</td>
-            </tr>
-            <tr>
-                <td>Puissance du moteur</td>
-                <td>3,7 kW</td>
-            </tr>
-            <tr>
-                <td>Connexion</td>
-                <td>16A 5P 400V</td>
-            </tr>
-            <tr>
-                <td>Inverse</td>
-                <td>Oui</td>
-            </tr>
-            <tr>
-                <td>Longueur du cordon d'alimentation</td>
-                <td>2 mètres</td>
-            </tr>
-            <tr>
-                <td>Nombre de bandes battantes</td>
-                <td>36</td>
-            </tr>
-            <tr>
-                <td>Possibilité de remplacer les sangles</td>
-                <td>Oui</td>
-            </tr>
-            <tr>
-                <td>Garantie</td>
-                <td>12 mois</td>
-            </tr>
-            <tr>
-                <td>Garantie prolongée</td>
-                <td>Facultatif</td>
-            </tr>
+        </div>
+
+        <div class="hours">
+            <H3>Heures de Travail</H3>
+            <table class="table-hours">
+                <tr>
+                    <th id="hours-1">Dimanche - Samedi</th>
+                    <td id="hours-1-detail">08:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <th id="friday">Vendredi</th>
+                    <td id="friday-detail"><strong>Fermé</strong></td>
+                </tr>
             </table>
         </div>
-    </div>
-</div>
-</main>
+    </footer>
+    <script>
+        const texts = {
+            "fr": {
+                "machine-title": "Batteur de tapis",
+                "adv-title": "Avantages",
+                "adv-1": "Amélioration significative de la qualité de service par rapport au fouet mécanique Tornado T-600",
+                "adv-2": "Économiser de l'électricité",
+                "adv-3": "Possibilité de placer la machine à côté du mur",
+                "adv-4": "Économiser du travail humain et raccourcir le temps de service",
+                "adv-5": "Système d'agitation sûr et efficace",
+                "adv-6": "Possibilité de secouer plusieurs petits tapis en même temps",
+                "adv-7": "L'ensemble comprend un absorbeur et une plateforme pour rouler les tapis",
+                "adv-8": "Panneau de commande simple et clair (interrupteur, marche arrière, potentiomètre pour régler la vitesse d'avancement du tapis)",
+                "adv-9": "Quatre roues pivotantes avec verrou qui garantissent la mobilité",
+                "adv-10": "L'ensemble de l'appareil est en acier galvanisé à chaud",
+                "tech-title": "Données techniques",
+                "footer-about": "À propos de :",
+                "spec-name": "Caractéristique",
+                "spec-detail": "Détail",
+                "max-width": "Largeur maximale du tapis",
+                "max-width-detail": "3,0 m",
+                "efficiency": "Efficacité",
+                "efficiency-detail": "250 m²/heure",
+                "length": "Longueur",
+                "length-detail": "3300 mm",
+                "width": "Largeur",
+                "width-detail": "800 mm",
+                "height": "Hauteur",
+                "height-detail": "1400 mm",
+                "weight": "Poids",
+                "weight-detail": "300 kg",
+                "material": "Matériau",
+                "material-detail": "Galvanisé à chaud",
+                "suspension": "Type de suspension",
+                "suspension-detail": "Roues",
+                "motor-power": "Puissance du moteur",
+                "motor-power-detail": "3,7 kW",
+                "connection": "Connexion",
+                "connection-detail": "16A 5P 400V",
+                "reverse": "Inverse",
+                "reverse-detail": "Oui",
+                "cord-length": "Longueur du cordon d'alimentation",
+                "cord-length-detail": "2 mètres",
+                "battens": "Nombre de bandes battantes",
+                "battens-detail": "36",
+                "replace-bands": "Possibilité de remplacer les sangles",
+                "replace-bands-detail": "Oui",
+                "warranty": "Garantie",
+                "warranty-detail": "12 mois",
+                "extended-warranty": "Garantie prolongée",
+                "extended-warranty-detail": "Facultatif",
+                "hours-1": "Dimanche - Samedi",
+                "hours-1-detail": "08:00 - 17:00",
+                "friday": "Vendredi",
+                "friday-detail": "<strong>Fermé</strong>"
+            },
+            "ar": {
+                "machine-title": "جهاز تنظيف السجاد",
+                "adv-title": "المزايا",
+                "adv-1": "تحسين كبير في جودة الخدمة مقارنة بالوَتَّار الميكانيكي Tornado T-600",
+                "adv-2": "توفير الكهرباء",
+                "adv-3": "إمكانية وضع الآلة بجانب الحائط",
+                "adv-4": "توفير العمل البشري وتقليل وقت الخدمة",
+                "adv-5": "نظام اهتزاز آمن وفعال",
+                "adv-6": "إمكانية هز عدة سجاد صغيرة في نفس الوقت",
+                "adv-7": "يشمل الجهاز ممتص وصينية لطي السجاد",
+                "adv-8": "لوحة تحكم بسيطة وواضحة (مفتاح، عكسي، ومقياس لضبط سرعة تقدم السجاد)",
+                "adv-9": "أربع عجلات دوارة مع قفل لضمان التنقل",
+                "adv-10": "الجهاز بالكامل مصنوع من الفولاذ المجلفن",
+                "tech-title": "البيانات التقنية",
+                "footer-about": "عن :",
+                "spec-name": "الخاصية",
+                "spec-detail": "التفاصيل",
+                "max-width": "أقصى عرض للسجادة",
+                "max-width-detail": "3.0 متر",
+                "efficiency": "الكفاءة",
+                "efficiency-detail": "250 م²/ساعة",
+                "length": "الطول",
+                "length-detail": "3300 مم",
+                "width": "العرض",
+                "width-detail": "800 مم",
+                "height": "الارتفاع",
+                "height-detail": "1400 مم",
+                "weight": "الوزن",
+                "weight-detail": "300 كجم",
+                "material": "المادة",
+                "material-detail": "مجلفن بالحرارة",
+                "suspension": "نوع التعليق",
+                "suspension-detail": "عجلات",
+                "motor-power": "قوة المحرك",
+                "motor-power-detail": "3.7 كيلو وات",
+                "connection": "الاتصال",
+                "connection-detail": "16A 5P 400V",
+                "reverse": "عكسي",
+                "reverse-detail": "نعم",
+                "cord-length": "طول سلك الطاقة",
+                "cord-length-detail": "2 متر",
+                "battens": "عدد الأشرطة الضاربة",
+                "battens-detail": "36",
+                "replace-bands": "إمكانية استبدال الأشرطة",
+                "replace-bands-detail": "نعم",
+                "warranty": "الضمان",
+                "warranty-detail": "12 شهرًا",
+                "extended-warranty": "الضمان الممتد",
+                "extended-warranty-detail": "اختياري",
+                "hours-1": "الأحد - السبت",
+                "hours-1-detail": "08:00 - 17:00",
+                "friday": "الجمعة",
+                "friday-detail": "<strong>مغلق</strong>"
+            }
+        };
 
-
-<footer>
-    <div class="footer-logo">
-    <img src="Nouveau dossier/TAPMACHINE SYSTEMS WHITE.png" alt="">
-    </div>
-
-    <div class="about">
-        <ul class="footer-info">
-            <h3>ABOUT :</h3>
-            <li class="nav-item">
-                <a href="https://www.google.com/maps/place/Tapmachine+Systems/@36.3120516,6.6077126,16z/data=!4m6!3m5!1s0x12f171f12ef8aeb9:0x525ddc65821ac786!8m2!3d36.3120793!4d6.6064421!16s%2Fg%2F11t5wx_bjp?authuser=0&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"> <img src="icon/map-marker-2-24.png" alt="">Ain El Bey</a>
-            </li>
-            <li class="nav-item">
-                <a href="mailto:dse@gmail.com"><img src="icon/mail-24.png" alt="">dse@gmail.com</a>
-            </li>
-            <li class="nav-item">
-                <a href="tel:+213552533651"><img src="icon/phone-24.png" alt="">+213552533651</a>
-            </li>
-
-        </ul>
-    </div>
-
-    <div class="hours">
-        <H3>Heures de Travail</H3>
-        <table class="table-hours">
-            <tr>
-                <th>Dimache - Samedi</th>
-                <td>08:00 - 17:00</td>
-              </tr>
-              <tr>
-                <th>Vendredi</th>
-                <td><strong>ferme</strong></td>
-              </tr>
-
-          </table>
-
-    </div>
-</footer>
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[id]');
+            elements.forEach(element => {
+                const id = element.id;
+                if (texts[language] && texts[language][id]) {
+                    element.innerText = texts[language][id];
+                }
+            });
+        }
+    </script>
 </body>
 </html>
