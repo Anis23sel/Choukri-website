@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Lato:wght@700&family=Poppins&family=Racing+Sans+One&display=swap');
+
+
 /* ========== Global Styles ========== */
 * {
     margin: 0;
@@ -135,7 +138,7 @@ a {
     .navbar{
         display: flex;
         flex-direction: column;
-        padding-bottom:40px ;
+        
     }
     .logo-menu{
         display: flex;
@@ -152,7 +155,7 @@ a {
         padding: 20px;
         text-align: center;
         width: 100%;
-        height: 200px;
+        height: 250px;
 
     }
     .nav-link{
@@ -211,6 +214,7 @@ footer a {
     color: #ffffff;
 }
 
+
 /* ========== Table Styles ========== */
 .hours tr {
     border-bottom: 1px solid #A3A8AE;
@@ -238,47 +242,61 @@ td {
 /* ========== Page d'accueil ========== */
 
 .part1-image {
-    background-image: url("machine/emballage2.png");
-    height: 70vh;
-    background-position: center;
-    background-size: cover;
-    margin: 5vh 0px; /* Space between part1 and part2 */
-    z-index: 1; 
+   display: flex;
+   flex-direction: row;
+   background-color: #041E41;
+   justify-content: center;
+   align-items: center;
+   font-family: "Almarai", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 0%;
+    margin: 0%;
+
 }
 
 
 .part1-text {
-    width: 100%;
-    height: 100%;
+
     text-align: center;
-    color: white;
-    padding: 10vh;
-    text-shadow: 1px 1px #000;
-    background-color: rgba(187, 187, 187, 0); /* Couleur rouge semi-transparente */
-    backdrop-filter: blur(4px);
+    color: white;;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    width: 40%;
 }
 
 .part1-text h1 {
-    font-size: 50px;
-    margin-bottom: 1em;
+    position: relative;
+    font-size: 60px;
+    font-family: "Almarai", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    left: 200px;
+    width: 800px;
+
 }
 
 /* Responsive adjustments */
 
 @media (max-width: 480px) {
     .part1-image {
-        height: 40vh;
+        margin: 0;
+        height: 38vh;
     }
     .part1-text h1 {
         font-size: 20px;
-        padding: 0.3em;
+        padding: 0em;
+        left: 85px;
+        width: 200px;
     }
-    .part1-text h3{
-        font-size: 14px;
+    .part1-text{
+        width: 10%;
+    }
+    .banner img{
+        aspect-ratio: 3/2;
     }
 
 }
@@ -305,7 +323,6 @@ main h3 {
     padding: 5vh;
     align-items: center;
     gap: 2vh;
-    margin-top: 2vh; /* Ensure separation from the part1 section */
 }
 
 .titre {
