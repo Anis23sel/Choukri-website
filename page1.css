@@ -9,6 +9,7 @@
     font-family: "Lato", serif;
 }
 
+
 .bt{
     display: none;
 }
@@ -45,46 +46,57 @@ a {
 .logo-menu{
     width: 250px;
 }
-/* Style du menu déroulant */
 
-#language-dropdown {
-    color: #000000;
-    font-size: 16px; /* Taille du texte */
-    padding: 4px 6px; /* Espacement autour du texte */
-    background-color: #ffffff00; /* Fond blanc */
-    border: 2px solid #00000000; /* Bordure grise claire */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
-    transition: all 0.3s ease; /* Animation de transition */
-    width: 3.5em;
+ /* Style du conteneur principal */
+ #google_translate_element {
+    text-align: center;
+    height:35px;
+
+  }
+
+  /* Style du menu déroulant (select) */
+  #google_translate_element select {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #google_translate_element select:hover{
+    border: 2px solid #0056b3;
+  }
+  /* Masquer le logo Google Translate (si permis) */
+  .goog-te-gadget .goog-te-gadget-simple {
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  /* Masquer l'attribut "powered by Google" */
+  .goog-te-gadget span {
+    display: none;
+  }
+  .VIpgJd-ZVi9od-ORHb-OEVmcd.skiptranslate{
+    display: none;
+    margin-top: -20px;
+  }
+  .translated-ltr{
+    margin-top: -40px;
+  }
+  .translated-rtl{
+    margin-top: -40px;
+  }
+.skiptranslate.goog-te-gadget{
+  color: white;
 }
-
-/* Changer la bordure et la couleur de fond au survol */
-#language-dropdown:hover {
-    border-color: #007bff; /* Bordure bleue au survol */
-    background-color: #f1f1f1; /* Fond gris clair au survol */
-}
-
-/* Changer la couleur du texte lorsqu'une option est sélectionnée */
-#language-dropdown option {
-    font-family: 'Arial', sans-serif;
-    color: #333; /* Couleur du texte des options */
-    background-color: #fff; /* Fond blanc des options */
-}
-
-/* Option active - lorsqu'une langue est sélectionnée */
-#language-dropdown:focus {
-    border-color: #007bff; /* Bordure bleue lorsqu'on sélectionne */
-    outline: none; /* Supprimer le contour par défaut */
-}
-
-
 
 /* ========== Responsive Navigation ========== */
 @media screen and (min-width: 500px) {
 
     .nav-link {
         font-size: 16px; /* Slightly smaller font for medium screens */
+
     }
 
     .nav-logo {
@@ -116,13 +128,14 @@ a {
 }
 
 @media screen and (max-width: 500px) {
+
     .nav-logo {
         width: 30vh;
     }
     .navbar{
         display: flex;
         flex-direction: column;
-        
+        margin-bottom:40px ;
     }
     .logo-menu{
         display: flex;
@@ -193,6 +206,9 @@ footer h3 {
     border-left: 5px solid #1F3C8B;
     padding-left: 20px;
     margin-left: 6px;
+}
+footer a {
+    color: #ffffff;
 }
 
 /* ========== Table Styles ========== */
@@ -284,7 +300,7 @@ main h3 {
     background-color: #ffffff;
     font-weight: 700;
     font-size: 2.5vh;
-    color: #0e2038;
+    color: #000000;
     line-height: 3.2vh;
     padding: 5vh;
     align-items: center;

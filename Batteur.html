@@ -13,7 +13,7 @@
         <nav class="navbar">
             <div class="logo-menu">
             <a href="https://anis23sel.github.io/Daho-s-website/page1.html" class="nav-logo">
-                <img src="Nouveau dossier/TAPMACHINE SYSTEMS BLUE. spng.png" alt="">
+                <img src="Nouveau dossier/TAPMACHINE SYSTEMSWHITE.png" alt="">
             </a>
             <button type="button" onclick="toggleForm()" class="bt" id="nav-list"><span class="material-symbols-outlined">menu</span></button>
             </div>
@@ -31,12 +31,9 @@
                     <a href="https://anis23sel.github.io/Daho-s-website/contact.html" class="nav-link" id="contact-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <div class="language-selector">
-                        <select id="language-dropdown" onchange="changeLanguage(this.value)">
-                            <option value="fr">Fr</option>
-                            <option value="ar">العربية</option>
-                        </select>
-                    </div>
+                    <li class="nav-item">
+                        <div id="google_translate_element"></div>
+                    </li>
                 </li>
             </ul>
         </nav>
@@ -195,127 +192,15 @@
             </table>
         </div>
     </footer>
-    <script>
-        const texts = {
-            "fr": {
-                "machine-title": "Batteur de tapis",
-                "adv-title": "Avantages",
-                "adv-1": "Amélioration significative de la qualité de service par rapport au fouet mécanique Tornado T-600",
-                "adv-2": "Économiser de l'électricité",
-                "adv-3": "Possibilité de placer la machine à côté du mur",
-                "adv-4": "Économiser du travail humain et raccourcir le temps de service",
-                "adv-5": "Système d'agitation sûr et efficace",
-                "adv-6": "Possibilité de secouer plusieurs petits tapis en même temps",
-                "adv-7": "L'ensemble comprend un absorbeur et une plateforme pour rouler les tapis",
-                "adv-8": "Panneau de commande simple et clair (interrupteur, marche arrière, potentiomètre pour régler la vitesse d'avancement du tapis)",
-                "adv-9": "Quatre roues pivotantes avec verrou qui garantissent la mobilité",
-                "adv-10": "L'ensemble de l'appareil est en acier galvanisé à chaud",
-                "tech-title": "Données techniques",
-                "footer-about": "À propos de :",
-                "spec-name": "Caractéristique",
-                "spec-detail": "Détail",
-                "max-width": "Largeur maximale du tapis",
-                "max-width-detail": "3,0 m",
-                "efficiency": "Efficacité",
-                "efficiency-detail": "250 m²/heure",
-                "length": "Longueur",
-                "length-detail": "3300 mm",
-                "width": "Largeur",
-                "width-detail": "800 mm",
-                "height": "Hauteur",
-                "height-detail": "1400 mm",
-                "weight": "Poids",
-                "weight-detail": "300 kg",
-                "material": "Matériau",
-                "material-detail": "Galvanisé à chaud",
-                "suspension": "Type de suspension",
-                "suspension-detail": "Roues",
-                "motor-power": "Puissance du moteur",
-                "motor-power-detail": "3,7 kW",
-                "connection": "Connexion",
-                "connection-detail": "16A 5P 400V",
-                "reverse": "Inverse",
-                "reverse-detail": "Oui",
-                "cord-length": "Longueur du cordon d'alimentation",
-                "cord-length-detail": "2 mètres",
-                "battens": "Nombre de bandes battantes",
-                "battens-detail": "36",
-                "replace-bands": "Possibilité de remplacer les sangles",
-                "replace-bands-detail": "Oui",
-                "warranty": "Garantie",
-                "warranty-detail": "12 mois",
-                "extended-warranty": "Garantie prolongée",
-                "extended-warranty-detail": "Facultatif",
-                "hours-1": "Dimanche - Samedi",
-                "hours-1-detail": "08:00 - 17:00",
-                "friday": "Vendredi",
-                "friday-detail": "<strong>Fermé</strong>"
-            },
-            "ar": {
-                "machine-title": "جهاز تنظيف السجاد",
-                "adv-title": "المزايا",
-                "adv-1": "تحسين كبير في جودة الخدمة مقارنة بالوَتَّار الميكانيكي Tornado T-600",
-                "adv-2": "توفير الكهرباء",
-                "adv-3": "إمكانية وضع الآلة بجانب الحائط",
-                "adv-4": "توفير العمل البشري وتقليل وقت الخدمة",
-                "adv-5": "نظام اهتزاز آمن وفعال",
-                "adv-6": "إمكانية هز عدة سجاد صغيرة في نفس الوقت",
-                "adv-7": "يشمل الجهاز ممتص وصينية لطي السجاد",
-                "adv-8": "لوحة تحكم بسيطة وواضحة (مفتاح، عكسي، ومقياس لضبط سرعة تقدم السجاد)",
-                "adv-9": "أربع عجلات دوارة مع قفل لضمان التنقل",
-                "adv-10": "الجهاز بالكامل مصنوع من الفولاذ المجلفن",
-                "tech-title": "البيانات التقنية",
-                "footer-about": "عن :",
-                "spec-name": "الخاصية",
-                "spec-detail": "التفاصيل",
-                "max-width": "أقصى عرض للسجادة",
-                "max-width-detail": "3.0 متر",
-                "efficiency": "الكفاءة",
-                "efficiency-detail": "250 م²/ساعة",
-                "length": "الطول",
-                "length-detail": "3300 مم",
-                "width": "العرض",
-                "width-detail": "800 مم",
-                "height": "الارتفاع",
-                "height-detail": "1400 مم",
-                "weight": "الوزن",
-                "weight-detail": "300 كجم",
-                "material": "المادة",
-                "material-detail": "مجلفن بالحرارة",
-                "suspension": "نوع التعليق",
-                "suspension-detail": "عجلات",
-                "motor-power": "قوة المحرك",
-                "motor-power-detail": "3.7 كيلو وات",
-                "connection": "الاتصال",
-                "connection-detail": "16A 5P 400V",
-                "reverse": "عكسي",
-                "reverse-detail": "نعم",
-                "cord-length": "طول سلك الطاقة",
-                "cord-length-detail": "2 متر",
-                "battens": "عدد الأشرطة الضاربة",
-                "battens-detail": "36",
-                "replace-bands": "إمكانية استبدال الأشرطة",
-                "replace-bands-detail": "نعم",
-                "warranty": "الضمان",
-                "warranty-detail": "12 شهرًا",
-                "extended-warranty": "الضمان الممتد",
-                "extended-warranty-detail": "اختياري",
-                "hours-1": "الأحد - السبت",
-                "hours-1-detail": "08:00 - 17:00",
-                "friday": "الجمعة",
-                "friday-detail": "<strong>مغلق</strong>"
-            }
-        };
 
-        function changeLanguage(language) {
-            const elements = document.querySelectorAll('[id]');
-            elements.forEach(element => {
-                const id = element.id;
-                if (texts[language] && texts[language][id]) {
-                    element.innerText = texts[language][id];
-                }
-            });
-        }
-    </script>
 </body>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {pageLanguage: 'fr', includedLanguages: 'ar,fr'},
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </html>

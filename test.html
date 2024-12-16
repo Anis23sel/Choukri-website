@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma page</title>
-
-    <!-- Intégration de Google Traduction -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'fr',
-                includedLanguages: 'en,fr,de,it,es',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!-- Personnalisation du widget Google Traduction -->
-    <style>
-        #google_translate_element {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        .goog-te-menu-frame {
-            border: 2px solid #007BFF;
-            border-radius: 5px;
-        }
-
-        .goog-te-menu-value {
-            color: #007BFF;
-        }
-
-        .goog-te-menu-value:hover {
-            color: #FF5722;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouton de traduction</title>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {pageLanguage: 'fr', includedLanguages: 'en,fr'},
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
+  <div id="google_translate_element"></div>
 
-    <!-- Widget de traduction -->
-    <div id="google_translate_element"></div>
-
-    <header>
-        <h1>Bienvenue sur mon site !</h1>
-    </header>
-
-    <main>
-        <p>Voici un exemple de contenu sur ma page. Vous pouvez le traduire en cliquant sur le menu en haut.</p>
-    </main>
-
-    <footer>
-        <p>© 2024 Mon site web</p>
-    </footer>
-
+  <h1>Bonjour, bienvenue sur mon site !</h1>
+  <p>Ceci est un exemple de page en français.</p>
 </body>
+<style>
+    /* Style du conteneur principal */
+    #google_translate_element {
+      margin: 10px;
+      text-align: center;
+    }
+
+    /* Style du menu déroulant (select) */
+    #google_translate_element select {
+      background-color: #f8f9fa;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Style du texte ou des liens générés par Google Translate */
+    .goog-te-gadget {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Masquer le logo Google Translate (si permis) */
+    .goog-te-gadget .goog-te-gadget-simple {
+      display: inline-block;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    /* Masquer l'attribut "powered by Google" */
+    .goog-te-gadget span {
+      display: none;
+    }
+    body > .goog-te-banner-frame {
+    display: none;
+  }
+  .VIpgJd-ZVi9od-ORHb-OEVmcd.skiptranslate{
+    height: 0px;
+  }
+  .translated-ltr{
+    height: 0px;
+  }
+  /* Adjust the body margin to avoid layout shift */
+  body {
+    margin-top: 0 !important;
+  }
+  </style>
 </html>
