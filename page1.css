@@ -242,63 +242,30 @@ td {
 /* ========== Page d'accueil ========== */
 
 .part1-image {
-   display: flex;
-   flex-direction: row;
-   background-color: #041E41;
-   justify-content: center;
-   align-items: center;
-   font-family: "Almarai", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    padding: 0%;
-    margin: 0%;
-
+    position: relative;
+    
 }
-
 
 .part1-text {
-
+    position: absolute;
+    top:50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    width: 50%;
     text-align: center;
-    color: white;;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    width: 40%;
+}
+.part1-text h1{
+    font-size: 5.5vw;    
 }
 
-.part1-text h1 {
-    position: relative;
-    font-size: 60px;
-    font-family: "Almarai", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    left: 200px;
-    width: 800px;
-
-}
 
 /* Responsive adjustments */
 
-@media (max-width: 480px) {
-    .part1-image {
-        margin: 0;
-        height: 38vh;
-    }
-    .part1-text h1 {
-        font-size: 20px;
-        padding: 0em;
-        left: 85px;
-        width: 200px;
-    }
-    .part1-text{
-        width: 10%;
-    }
-    .banner img{
-        aspect-ratio: 3/2;
-    }
-
+@media screen and (max-width: 480px) {
+    
 }
 
 main h1 {
@@ -317,40 +284,25 @@ main h3 {
     text-align: center;
     background-color: #ffffff;
     font-weight: 700;
-    font-size: 2.5vh;
+    font-size: 3.5vh;
     color: #000000;
-    line-height: 3.2vh;
-    padding: 5vh;
+    padding:9vh;
     align-items: center;
-    gap: 2vh;
+    gap: 3vh;
 }
 
 .titre {
     font-weight: 700;
-    font-size: 6vh;
-    line-height: 8vh;
+    font-size: 7vh;
     text-transform: uppercase;
 }
-
-.part2-btn {
-    color: #ffffff;
-    height: 4.4vh;
-    width: 100%;
-    max-width: 22vh;
-    background-color: #1F3C8B;
-    border: none;
-    padding: 0.5vh 2vh;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 3vh;
-}
-
 .part3 {
     text-align: center;
 }
 
 .part3 h1 {
-    margin: 2vh;
+    padding:2vh;
+   
 }
 
 .allcase {
